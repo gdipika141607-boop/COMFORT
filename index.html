@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dalokira Retreat & Spa | Luxury Sanctuary</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Fonts for Luxury Aesthetic -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /*Custom Styling Overriding/Extending Bootstrap */
+    :root {
+      --gold-primary: #c5a059;
+      --gold-hover: #b08b45;
+      --dark-royal: #111827;
+      --font-serif: 'Cinzel', serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: #4a4a4a;
+    }
+
+    h1, h2, h3, h4, h5, .navbar-brand, .font-serif {
+      font-family: var(--font-serif);
+    }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: var(--dark-royal);
+      color: #d1d5db;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    /* Navigation */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+    .navbar-brand {
+      color: var(--dark-royal) !important;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .nav-link {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      color: #333 !important;
+      font-weight: 500;
+      padding-left: 1.2rem !important;
+      padding-right: 1.2rem !important;
+    }
+    .nav-link:hover {
+      color: var(--gold-primary) !important;
+    }
+
+    /* Custom Buttons */
+    .btn-gold {
+      background-color: var(--gold-primary);
+      color: #fff;
+      border: none;
+      border-radius: 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.75rem;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      background-color: var(--gold-hover);
+      color: #fff;
+    }
+    .btn-outline-gold {
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      border-radius: 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.75rem;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-gold:hover {
+      background-color: var(--gold-primary);
+      color: #fff;
+    }
+
+    /* Hero Carousel Overlay */
+    .hero-carousel .carousel-item {
+      height: 85vh;
+      min-height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+    .carousel-caption-custom {
+      background: rgba(17, 24, 39, 0.55);
+      padding: 3rem;
+      backdrop-filter: blur(3px);
+    }
+
+    /* Booking Widget Bar */
+    .booking-bar {
+      background: #ffffff;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      margin-top: -50px;
+      position: relative;
+      z-index: 10;
+      padding: 20px;
+    }
+    .booking-bar label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #6b7280;
+    }
+
+    /* Cards & Offers */
+    .card-luxury {
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-luxury:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+    .card-luxury .card-title {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark-royal);
+      color: #9ca3af;
+    }
+    footer h5 {
+      color: #fff;
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    footer a {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    footer a:hover {
+      color: var(--gold-primary);
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="top-bar py-2 d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <i class="bi bi-geo-alt text-warning me-1"></i> Bengaluru, Karnataka, India
+        <span class="mx-2">|</span>
+        <i class="bi bi-telephone text-warning me-1"></i> +91 XX XXXX XXXX
+      </div>
+      <div>
+        <a href="#" class="text-light text-decoration-none me-3">Offers</a>
+        <a href="#" class="text-light text-decoration-none me-3">Gallery</a>
+        <a href="#" class="text-light text-decoration-none">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-center" href="#">
+        THE DALOKIRA RETREAT
+        <span class="d-block small text-muted font-sans" style="font-size: 0.6rem; letter-spacing: 3px;">BENGALURU</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rooms">Rooms & Suites</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dining">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="#spa">Spa & Wellness</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Event Spaces</a></li>
+        </ul>
+        <a href="#booking" class="btn btn-gold">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+          <div class="carousel-caption-custom text-center text-white">
+            <h1 class="display-4 fw-bold">A Timeless Royal Retreat</h1>
+            <p class="lead font-sans">Experience unparalleled opulence and traditional hospitality in the heart of the Garden City.</p>
+            <a href="#rooms" class="btn btn-gold mt-3">Explore Suites</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://t4.ftcdn.net/jpg/12/96/73/51/360_F_1296735116_5BIznMkchWbbGP1jF5CWWgx18lWAnm4X.jpg');">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+          <div class="carousel-caption-custom text-center text-white">
+            <h1 class="display-4 fw-bold">Exquisite Culinary Journeys</h1>
+            <p class="lead font-sans">Savor award-winning cuisines crafted by master chefs from across the globe.</p>
+            <a href="#dining" class="btn btn-gold mt-3">Discover Dining</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/069/791/770/small/spa-towel-orchids-candles-wellness-center-photo.jpg');">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+          <div class="carousel-caption-custom text-center text-white">
+            <h1 class="display-4 fw-bold">Rejuvenation for Body & Soul</h1>
+            <p class="lead font-sans">Indulge in authentic Ayurvedic therapies and contemporary wellness rituals.</p>
+            <a href="#spa" class="btn btn-gold mt-3">View Spa Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  
+  <div class="container" id="booking">
+    <div class="booking-bar">
+      <form class="row g-3 align-items-end">
+        <div class="col-md-3">
+          <label class="form-label">Check-In</label>
+          <input type="date" class="form-control rounded-0">
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Check-Out</label>
+          <input type="date" class="form-control rounded-0">
+        </div>
+        <div class="col-md-2">
+          <label class="form-label">Guests</label>
+          <select class="form-select rounded-0">
+            <option selected></option>
+            <option>1 Adult</option>
+            <option>2 Adults</option>
+            <option>2 Adults, 1 Child</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label class="form-label">Promo Code</label>
+          <input type="text" class="form-control rounded-0" placeholder="Optional">
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-gold w-100">Check Rates</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+  <section class="py-5 my-5" id="overview">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="text-uppercase text-muted tracking-widest small">Welcome to Grandeur</span>
+          <h2 class="display-5 my-3">An Oasis of Majestic Elegance</h2>
+          <hr class="w-25 mx-auto text-warning border-2 opacity-100 mb-4">
+          <p class="lead text-muted">
+            Nestled amid seven acres of lush gardens and sparkling lagoons, The Dalokira Retreat Bengaluru stands as a monument to the grandeur of Vijanagara architecture. Unwind in regal luxury while staying seamlessly connected to the city's tech hubs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-5 bg-light" id="rooms">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-uppercase text-muted tracking-widest small">Accommodations</span>
+        <h2 class="display-6">Rooms & Presidential Suites</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Room 1 -->
+        <div class="col-md-4">
+          <div class="card card-luxury h-100">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Executive Suite">
+            <div class="card-body p-4 d-flex flex-column">
+              <h5 class="card-title">Executive Garden View</h5>
+              <p class="card-text text-muted flex-grow-1">Spacious room featuring private balconies overlooking serene botanical gardens.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="fw-bold text-dark">From ₹18,000 / night</span>
+                <a href="#" class="btn btn-outline-gold btn-sm">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-luxury h-100">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Royal Club Suite">
+            <div class="card-body p-4 d-flex flex-column">
+              <h5 class="card-title">Royal Club Suite</h5>
+              <p class="card-text text-muted flex-grow-1">Includes exclusive lounge access, personalized butler service, and airport transfers.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="fw-bold text-dark">From ₹28,000 / night</span>
+                <a href="#" class="btn btn-outline-gold btn-sm">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-luxury h-100">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Maharaja Suite">
+            <div class="card-body p-4 d-flex flex-column">
+              <h5 class="card-title">The Imperial Suite</h5>
+              <p class="card-text text-muted flex-grow-1">The pinnacle of luxury featuring a dining room, private plunge pool, and bulletproof glass.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="fw-bold text-dark">From ₹75,000 / night</span>
+                <a href="#" class="btn btn-outline-gold btn-sm">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-5" id="dining">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" class="img-fluid shadow-lg" alt="Fine Dining Restaurant">
+        </div>
+        <div class="col-lg-6">
+          <span class="text-uppercase text-muted tracking-widest small">World-Class Gastronomy</span>
+          <h2 class="display-6 my-3">Sensational Dining & Fine Wines</h2>
+          <p class="text-muted">
+            From authentic Indian delicacies served in royal thalis to contemporary European gastronomy under open skies, our restaurants offer an unforgettable culinary journey.
+          </p>
+          <ul class="list-unstyled my-4 text-muted">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Jamavar:</strong> Signature Royal Indian Cuisine</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>Citrus:</strong> All-Day Mediterranean & Asian Dining</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> <strong>The Library Bar:</strong> Rare Vintage Spirits & Cigars</li>
+          </ul>
+          <a href="#" class="btn btn-gold">Reserve A Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-5 bg-light" id="spa">
+    <div class="container py-3">
+      <div class="row align-items-center g-4 flex-row-reverse">
+        <div class="col-lg-6">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1NbQa9nJArcuM_42HLIic2uopwd0QcJCoskSYLpcj_Q&s=10" class="img-fluid rounded" alt="Spa and Wellness Therapy">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">Spa & Wellness Center</h2>
+          <p class="text-muted">
+            Relax with our signature traditional massage therapies, body treatments, and wellness packages offered by our trained spa staff.
+          </p>
+          <ul class="list-unstyled text-muted my-3">
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i> Ayurvedic Oil Therapies</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i> Hot Stone Massage Sessions</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i> Body Scrubs & Aromatherapy</li>
+          </ul>
+          <a href="#" class="btn btn-gold">Book Spa Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section class="py-5 bg-light" id="events">
+    <div class="container py-3">
+      <div class="row align-items-center g-4 flex-row-reverse">
+        <div class="col-lg-6">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1NbQa9nJArcuM_42HLIic2uopwd0QcJCoskSYLpcj_Q&s=10" class="img-fluid rounded" alt="Spa and Wellness Therapy">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">Event Spaces</h2>
+          <p class="text-muted">
+            Gather.Celebrate.Cherish!!
+          </p>
+          <ul class="list-unstyled text-muted my-3">
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i> Open-air Celebrations</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i> Banquet Halls</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i> Hill side Celebrations</li>
+          </ul>
+          <div class="col-lg-6">
+          <h5 class="fw-bold mb-3">Services provided :</h5>
+          <ul class="list-unstyled text-muted my-3">
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i>Corporate Events</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i>Custom Decor</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-warning me-2"></i> Audio-visual facilities</li>
+          </ul>
+          
+          <a href="#" class="btn btn-gold">Book your Spaces</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <footer class="pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-4 col-md-6">
+          <h4 class="text-white font-serif mb-3">THE DALOKIRA RETREAT</h4>
+          <p class="small">Experience the finest luxury accommodations, heritage dining, and wellness retreats in Bengaluru.</p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5>QUICK LINKS</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="#overview">About Us</a></li>
+            <li class="mb-2"><a href="#rooms">Rooms & Suites</a></li>
+            <li class="mb-2"><a href="#dining">Restaurants</a></li>
+            <li class="mb-2"><a href="#spa">Wellness Spa</a></li>
+            <li class="mb-2"><a href="#events">Events And Spaces</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>CONTACT US</h5>
+          <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i> Yelahanka, Bengaluru, India</p>
+          <p class="small mb-1"><i class="bi bi-telephone me-2"></i> +91 XX XXXX XXXX</p>
+          <p class="small"><i class="bi bi-envelope me-2"></i> reservations@dalokiraretreat.com</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>NEWSLETTER</h5>
+          <p class="small">Subscribe to receive special offers and updates.</p>
+          <div class="input-group">
+            <input type="email" class="form-control rounded-0" placeholder="Your Email">
+            <button class="btn btn-gold" type="button">Join</button>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="text-center small py-2">
+        &copy; 2026 The Dalokira Retreat Bengaluru. Built with Bootstrap 5.
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
